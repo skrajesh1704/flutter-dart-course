@@ -11,8 +11,12 @@ class _RollDiceState extends State<RollDice> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [Text('Hello World!')],
+      backgroundColor: Colors.blue.shade300,
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [Text('Hello World!')],
+        ),
       ),
     );
   }
