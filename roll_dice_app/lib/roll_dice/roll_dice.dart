@@ -15,7 +15,7 @@ class _RollDiceState extends State<RollDice> {
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [Text('Hello World!')],
+          children: [TextButton(onPressed: () {}, child: Text('Click Me'))],
         ),
       ),
     );
