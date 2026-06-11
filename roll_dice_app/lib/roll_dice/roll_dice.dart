@@ -17,15 +17,24 @@ class _RollDiceState extends State<RollDice> {
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Click Me',
-                  style: TextStyle(
+              onPressed: () {},
+              style: ButtonStyle(
+                side: WidgetStatePropertyAll(
+                  BorderSide(
                     color: Colors.black,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w600,
+                    width: 2,
                   ),
-                ))
+                ),
+              ),
+              child: const Text(
+                'Click Me',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
           ],
         ),
       ),
