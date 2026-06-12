@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice_app/roll_dice/roll_button.dart';
 
 class RollDice extends StatefulWidget {
   const RollDice({super.key});
@@ -16,25 +17,7 @@ class _RollDiceState extends State<RollDice> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TextButton(
-              onPressed: () {},
-              style: ButtonStyle(
-                side: WidgetStatePropertyAll(
-                  BorderSide(
-                    color: Colors.black,
-                    width: 2,
-                  ),
-                ),
-              ),
-              child: const Text(
-                'Click Me',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
+            RollButton(),
           ],
         ),
       ),
