@@ -6,7 +6,9 @@ class RollButton extends StatelessWidget {
   @override
   Widget build(context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        print('clicked btn');
+      },
       style: ButtonStyle(
         side: WidgetStatePropertyAll(
           BorderSide(
