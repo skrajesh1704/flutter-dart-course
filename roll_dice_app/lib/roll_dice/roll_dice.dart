@@ -23,6 +23,7 @@ class _RollDiceState extends State<RollDice> {
               'assets/images/dice-1.svg',
               height: 60,
             ),
+            // Button for flipping dice
             RollButton(),
           ],
         ),
