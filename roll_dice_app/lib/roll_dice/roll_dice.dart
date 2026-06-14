@@ -18,6 +18,7 @@ class _RollDiceState extends State<RollDice> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            //Dice image
             SvgPicture.asset(
               'assets/images/dice-1.svg',
               height: 60,
