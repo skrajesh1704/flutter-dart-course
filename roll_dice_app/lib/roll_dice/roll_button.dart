@@ -19,7 +19,7 @@ class RollButton extends StatelessWidget {
         ),
       ),
       child: const Text(
-        'Click Me',
+        'Click to Roll Dice',
         style: TextStyle(
           color: Colors.black,
           fontSize: 18.0,
