@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 class RollButton extends StatelessWidget {
-  const RollButton({super.key});
+  const RollButton({
+    super.key,
+    required this.diceRoll,
+  });
+
+  final VoidCallback diceRoll;
 
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        //working check
-        print('clicked btn');
-      },
-      style: ButtonStyle(
+      onPressed: diceRoll,
+      style: const ButtonStyle(
         side: WidgetStatePropertyAll(
           BorderSide(
             color: Colors.black,
