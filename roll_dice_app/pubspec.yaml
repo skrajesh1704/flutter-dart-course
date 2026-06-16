@@ -1,26 +1,45 @@
+# Name of the Flutter application
 name: roll_dice_app
+
+# Short description of the project
 description: "A new Flutter project."
 
+# Prevents the package from being published to pub.dev
 publish_to: "none"
 
+# App version: version_name+build_number
 version: 1.0.0+1
 
+# Defines the supported Dart SDK versions
 environment:
   sdk: ">=3.3.0 <4.0.0"
 
+# Packages required by the application
 dependencies:
+  # Flutter SDK dependency
   flutter:
     sdk: flutter
+
+  # iOS-style icons package
   cupertino_icons: ^1.0.8
+
+  # Package for displaying SVG images
   flutter_svg: ^2.3.0
 
+# Packages used during development and testing
 dev_dependencies:
+  # Flutter testing framework
   flutter_test:
     sdk: flutter
+
+  # Recommended lint rules for Flutter projects
   flutter_lints: ^5.0.0
 
+# Flutter-specific configuration
 flutter:
+  # Enables the use of Material Design icons
   uses-material-design: true
 
+  # Registers image assets used in the application
   assets:
     - assets/images/
