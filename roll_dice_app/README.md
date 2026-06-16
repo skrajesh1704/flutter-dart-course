@@ -1,16 +1,86 @@
-# roll_dice_app
+# 🎲 Roll Dice App
 
-A new Flutter project.
+A simple Flutter application that simulates rolling a dice. Tap the dice to generate a random number and display a new dice face.
+
+## Features
+
+- 🎲 Random dice rolling functionality
+- 📱 Clean and responsive user interface
+- 🖼️ Support for image assets
+- 🎨 SVG image support using `flutter_svg`
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+Before running this project, make sure you have:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter SDK installed
+- Dart SDK installed
+- A code editor such as VS Code or Android Studio
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd roll_dice_app
+```
+
+3. Install dependencies:
+
+```bash
+flutter pub get
+```
+
+4. Run the application:
+
+```bash
+flutter run
+```
+
+## Project Structure
+
+```text
+lib/
+├── main.dart
+├── roll_dice/
+│   └── roll_dice.dart
+
+assets/
+└── images/
+```
+
+## Dependencies
+
+- `flutter`
+- `cupertino_icons`
+- `flutter_svg`
+
+## Assets
+
+The project uses image assets located in:
+
+```text
+assets/images/
+```
+
+Make sure all required images are added to this directory and declared in `pubspec.yaml`.
+
+## Learning Resources
+
+If you're new to Flutter, these resources can help:
+
+- Flutter Codelab: Write your first Flutter app
+- Flutter Cookbook: Useful Flutter samples
+- Flutter Documentation
+
+## License
+
+This project is for learning and educational purposes.
