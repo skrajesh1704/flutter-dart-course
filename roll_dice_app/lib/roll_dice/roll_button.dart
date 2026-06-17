@@ -28,7 +28,7 @@ class RollButton extends StatelessWidget {
         side: WidgetStatePropertyAll(
           BorderSide(
             color: Colors.black,
-            width: 2,
+            width: 0.5,
           ),
         ),
       ),
