@@ -30,7 +30,7 @@ class _RollDiceState extends State<RollDice> {
   Widget build(BuildContext context) {
     return Scaffold(
       // Page background color
-      backgroundColor: Colors.blue.shade300,
+      backgroundColor: const Color.fromARGB(255, 142, 192, 233),
 
       body: Center(
         // Centers content on the screen
