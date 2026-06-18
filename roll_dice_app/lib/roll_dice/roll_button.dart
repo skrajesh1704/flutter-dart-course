@@ -27,7 +27,7 @@ class RollButton extends StatelessWidget {
         // Adds a black border around the button
         side: WidgetStatePropertyAll(
           BorderSide(
-            color: Colors.black,
+            color: Colors.blue,
             width: 0.5,
           ),
         ),
