@@ -39,7 +39,7 @@ class RollButton extends StatelessWidget {
 
         // Text styling
         style: TextStyle(
-          color: Colors.black, // Text color
+          color: Colors.red, // Text color
           fontSize: 18.0, // Text size
           fontWeight: FontWeight.w500, // Semi-bold text
         ),
