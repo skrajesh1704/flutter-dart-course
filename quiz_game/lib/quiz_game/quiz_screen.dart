@@ -10,6 +10,8 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(children: [Image.asset('assets/images/quiz_game.jpg')]),
+    );
   }
 }
