@@ -11,7 +11,24 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(context) {
     return Scaffold(
-      body: Column(children: [Image.asset('assets/images/quiz_game.jpg')]),
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 50.0),
+            child: Image.asset('assets/images/quiz_game.jpg'),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: Row(
+              children: [
+                Text('Start Quiz'),
+                Icon(Icons.arrow_forward_ios_rounded, size: 15.0),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
