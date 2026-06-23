@@ -5,6 +5,34 @@ class StartButton extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Text('BTN');
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.black.withAlpha(50), width: 1.5),
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      child: TextButton(
+        onPressed: () {},
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Start Quiz',
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.w600,
+                color: Colors.black,
+              ),
+            ),
+            SizedBox(width: 10.0),
+            Icon(
+              Icons.arrow_forward_ios_rounded,
+              size: 18.0,
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
