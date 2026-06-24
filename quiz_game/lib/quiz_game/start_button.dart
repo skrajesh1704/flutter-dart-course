@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_game/quiz_game/question_screen.dart';
 
 class StartButton extends StatelessWidget {
   const StartButton({super.key});
@@ -11,7 +12,12 @@ class StartButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => QuestionScreen()),
+          );
+        },
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
