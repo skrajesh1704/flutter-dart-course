@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_game/quiz_game/text_section.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
@@ -16,11 +17,11 @@ class _QuestionScreenState extends State<QuestionScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Hello, How are you...     ?'),
-            Text('Answer 1: Fine'),
-            Text('Answer 2: Doing Good'),
-            Text('Answer 3: Great'),
-            Text('Answer 4: All of the above'),
+            TextSection(textInput: 'Hello, How are you...     ?'),
+            TextSection(textInput: 'Answer 1: Fine'),
+            TextSection(textInput: 'Answer 2: Doing Good'),
+            TextSection(textInput: 'Answer 3: Great'),
+            TextSection(textInput: 'Answer 4: All of the above'),
           ],
         ),
       ),
