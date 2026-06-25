@@ -17,7 +17,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextSection(textInput: 'Hello, How are you...     ?'),
+            TextSection(
+              textInput: 'Hello, How are you...     ?',
+              textSize: 22.0,
+            ),
             TextSection(textInput: 'Answer 1: Fine'),
             TextSection(textInput: 'Answer 2: Doing Good'),
             TextSection(textInput: 'Answer 3: Great'),
