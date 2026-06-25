@@ -6,6 +6,9 @@ class TextSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(textInput);
+    return Text(
+      textInput,
+      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+    );
   }
 }
