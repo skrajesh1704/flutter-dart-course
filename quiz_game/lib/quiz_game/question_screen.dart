@@ -20,6 +20,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             TextSection(
               textInput: 'Hello, How are you...     ?',
               textSize: 22.0,
+              textWeight: FontWeight.w500,
             ),
             TextSection(textInput: 'Answer 1: Fine'),
             TextSection(textInput: 'Answer 2: Doing Good'),
