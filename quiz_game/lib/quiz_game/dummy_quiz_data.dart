@@ -1,4 +1,4 @@
-List<Map<String, dynamic>> data = [
+List<Map<String, dynamic>> questionData = [
   {
     "id": 1,
     "question": "What is the capital of France?",
