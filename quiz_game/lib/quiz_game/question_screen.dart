@@ -37,6 +37,21 @@ class _QuestionScreenState extends State<QuestionScreen> {
               return TextSection(textInput: questionSet["options"][index]);
             }),
 
+            ElevatedButton(
+              onPressed: () {
+                if (currentQuestion < questionData.length - 1) {
+                  setState(() {
+                    currentQuestion++;
+                  });
+                } else {
+                  setState(() {
+                    currentQuestion = 0;
+                  });
+                }
+              },
+              child: Text('Next'),
+            ),
+
             // // Answer option 1
             // TextSection(textInput: 'Answer 1: Fine'),
 
