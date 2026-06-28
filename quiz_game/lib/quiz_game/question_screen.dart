@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_game/quiz_game/dummy_quiz_data.dart';
+import 'package:quiz_game/quiz_game/next_btn.dart';
 import 'package:quiz_game/quiz_game/text_section.dart';
 
 /// Screen that displays a quiz question and its answer options.
@@ -44,24 +45,14 @@ class _QuestionScreenState extends State<QuestionScreen> {
             }),
 
             /// Button to move to the next question.
-            ElevatedButton(
-              onPressed: () {
-                /// Checks if there are more questions remaining.
-                if (currentQuestion < questionData.length - 1) {
-                  setState(() {
-                    /// Moves to the next question.
-                    currentQuestion++;
-                  });
-                } else {
-                  setState(() {
-                    /// Restarts the quiz after the last question.
-                    currentQuestion = 0;
-                  });
-                }
+            NextBtn(
+              currentQuestion: currentQuestion,
+              onQuestionChanged: (newIndex) {
+                setState(() {
+                  currentQuestion = newIndex;
+                });
               },
-              child: const Text('Next'),
             ),
-
             // Example static answer widgets (not used because
             // answers are generated dynamically above).
 
