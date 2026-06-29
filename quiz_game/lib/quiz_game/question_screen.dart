@@ -53,13 +53,6 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 });
               },
             ),
-            // Example static answer widgets (not used because
-            // answers are generated dynamically above).
-
-            // TextSection(textInput: 'Answer 1: Fine'),
-            // TextSection(textInput: 'Answer 2: Doing Good'),
-            // TextSection(textInput: 'Answer 3: Great'),
-            // TextSection(textInput: 'Answer 4: All of the above'),
           ],
         ),
       ),
