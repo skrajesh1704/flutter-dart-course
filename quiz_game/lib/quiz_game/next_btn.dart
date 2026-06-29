@@ -30,6 +30,16 @@ class _NextBtnState extends State<NextBtn> {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: nextQuestion, child: const Text('Next'));
+    return ElevatedButton(
+      onPressed: nextQuestion,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent, // Button color
+        foregroundColor: Colors.black, // Text color
+
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+      ),
+      child: const Text('Next'),
+    );
   }
 }
