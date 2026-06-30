@@ -43,10 +43,14 @@ class _NextBtnState extends State<NextBtn> {
 
       // Styles the button.
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+        side: BorderSide(
+          width: 1.5,
+          strokeAlign: BorderSide.strokeAlignOutside,
+          color: Colors.blueGrey,
+        ),
       ),
 
       // Text displayed on the button.
