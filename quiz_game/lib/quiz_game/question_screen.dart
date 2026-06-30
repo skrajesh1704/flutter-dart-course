@@ -45,6 +45,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             }),
 
             /// Button to move to the next question.
+            const SizedBox(height: 30.0),
             NextBtn(
               currentQuestion: currentQuestion,
               onQuestionChanged: (newIndex) {
