@@ -50,7 +50,14 @@ class _NextBtnState extends State<NextBtn> {
       ),
 
       // Text displayed on the button.
-      child: const Text('Next'),
+      child: const Text(
+        'Next',
+        style: TextStyle(
+          fontSize: 18.0,
+          fontWeight: FontWeight.w400,
+          color: Colors.black,
+        ),
+      ),
     );
   }
 }
