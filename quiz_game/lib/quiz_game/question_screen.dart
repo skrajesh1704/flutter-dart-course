@@ -37,6 +37,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
               textSize: 22.0,
               textWeight: FontWeight.w500,
             ),
+            const SizedBox(height: 30.0),
 
             /// Dynamically generates a TextSection widget
             /// for each answer option in the current question.
