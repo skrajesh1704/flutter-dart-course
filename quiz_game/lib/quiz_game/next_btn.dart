@@ -49,7 +49,7 @@ class _NextBtnState extends State<NextBtn> {
         side: BorderSide(
           width: 1.5,
           strokeAlign: BorderSide.strokeAlignOutside,
-          color: Colors.blueGrey,
+          color: Colors.grey,
         ),
       ),
 
