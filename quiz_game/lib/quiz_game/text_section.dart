@@ -19,7 +19,7 @@ class TextSection extends StatelessWidget {
     this.textSize = 18.0,
 
     // Default font weight
-    this.textWeight = FontWeight.w400,
+    this.textWeight = FontWeight.w500,
   });
 
   @override
