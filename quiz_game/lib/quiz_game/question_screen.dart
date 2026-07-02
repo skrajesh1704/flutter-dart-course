@@ -69,6 +69,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
             NextBtn(
               currentQuestion: currentQuestion,
               onQuestionChanged: (newIndex) {
+                if (selectedAnswers != null) {
+                  userAnswers[currentQuestion] = selectedAnswers!;
+                }
                 setState(() {
                   currentQuestion = newIndex;
                 });
