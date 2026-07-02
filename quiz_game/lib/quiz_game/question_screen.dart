@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_game/quiz_game/dummy_quiz_data.dart';
 import 'package:quiz_game/quiz_game/next_btn.dart';
+import 'package:quiz_game/quiz_game/result_screen.dart';
 import 'package:quiz_game/quiz_game/text_section.dart';
 
 /// Screen that displays a quiz question and its answer options.
@@ -79,7 +80,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 },
               ),
             ] else ...[
-              // ResultScreen
+              ResultScreen(questionData: userAnswers),
             ],
           ],
         ),
