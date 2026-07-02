@@ -66,17 +66,21 @@ class _QuestionScreenState extends State<QuestionScreen> {
 
             /// Button to move to the next question.
             const SizedBox(height: 30.0),
-            NextBtn(
-              currentQuestion: currentQuestion,
-              onQuestionChanged: (newIndex) {
-                if (selectedAnswers != null) {
-                  userAnswers[currentQuestion] = selectedAnswers!;
-                }
-                setState(() {
-                  currentQuestion = newIndex;
-                });
-              },
-            ),
+            if (currentQuestion < questionSet.length - 1) ...[
+              NextBtn(
+                currentQuestion: currentQuestion,
+                onQuestionChanged: (newIndex) {
+                  if (selectedAnswers != null) {
+                    userAnswers[currentQuestion] = selectedAnswers!;
+                  }
+                  setState(() {
+                    currentQuestion = newIndex;
+                  });
+                },
+              ),
+            ] else ...[
+              // ResultScreen
+            ],
           ],
         ),
       ),
