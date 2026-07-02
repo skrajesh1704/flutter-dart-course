@@ -15,6 +15,10 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   /// Stores the index of the currently displayed question.
   int currentQuestion = 0;
+  // Stores the selected option for the current question
+  String? selectedAnswers;
+  // Stores all selected answers
+  final Map<int, String> userAnswers = {};
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +45,24 @@ class _QuestionScreenState extends State<QuestionScreen> {
 
             /// Dynamically generates a TextSection widget
             /// for each answer option in the current question.
-            ...List.generate(questionSet['options'].length, (index) {
-              return TextSection(textInput: questionSet['options'][index]);
-            }),
+            RadioGroup<String>(
+              groupValue: selectedAnswers,
+              onChanged: (value) {
+                setState(() {
+                  selectedAnswers = value;
+                });
+              },
+              child: Column(
+                children: questionSet['options'].map<Widget>((option) {
+                  return Row(
+                    children: [
+                      Radio<String>(value: option),
+                      Expanded(child: TextSection(textInput: option)),
+                    ],
+                  );
+                }).toList(),
+              ),
+            ),
 
             /// Button to move to the next question.
             const SizedBox(height: 30.0),
