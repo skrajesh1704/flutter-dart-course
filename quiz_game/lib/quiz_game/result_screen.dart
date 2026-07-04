@@ -10,6 +10,7 @@ class ResultScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextSection(textInput: 'You have scored X out of Y questions'),
           Row(
