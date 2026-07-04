@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_game/quiz_game/text_section.dart';
 
 class ResultScreen extends StatelessWidget {
   final Map<int, String> questionData;
@@ -6,6 +7,21 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          TextSection(textInput: 'You have scored X out of Y questions'),
+          Row(
+            children: [
+              TextSection(textInput: 'Sl.'),
+              TextSection(textInput: 'Question'),
+            ],
+          ),
+          TextSection(textInput: 'Correct answer'),
+          TextSection(textInput: 'User Answer'),
+        ],
+      ),
+    );
   }
 }
