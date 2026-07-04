@@ -16,36 +16,30 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   /// Stores the index of the currently displayed question.
   int currentQuestion = 0;
-  // Stores the selected option for the current question
+
+  /// Stores the selected option for the current question.
   String? selectedAnswers;
-  // Stores all selected answers
+
+  /// Stores all selected answers.
   final Map<int, String> userAnswers = {};
 
   @override
   Widget build(BuildContext context) {
-    /// Retrieves the current question from the quiz data.
     final questionSet = questionData[currentQuestion];
 
     return Scaffold(
-      /// Sets the screen background color.
       backgroundColor: Colors.white,
-
       body: Center(
         child: Column(
-          /// Centers all widgets vertically.
           mainAxisAlignment: MainAxisAlignment.center,
-
           children: [
-            /// Displays the current question.
             TextSection(
               textInput: questionSet['question'],
               textSize: 22.0,
               textWeight: FontWeight.w500,
             ),
-            const SizedBox(height: 30.0),
+            const SizedBox(height: 30),
 
-            /// Dynamically generates a TextSection widget
-            /// for each answer option in the current question.
             RadioGroup<String>(
               groupValue: selectedAnswers,
               onChanged: (value) {
@@ -65,23 +59,31 @@ class _QuestionScreenState extends State<QuestionScreen> {
               ),
             ),
 
-            /// Button to move to the next question.
-            const SizedBox(height: 30.0),
-            if (currentQuestion < questionSet.length - 1) ...[
-              NextBtn(
-                currentQuestion: currentQuestion,
-                onQuestionChanged: (newIndex) {
-                  if (selectedAnswers != null) {
-                    userAnswers[currentQuestion] = selectedAnswers!;
-                  }
+            const SizedBox(height: 30),
+
+            NextBtn(
+              currentQuestion: currentQuestion,
+              onQuestionChanged: (newIndex) {
+                if (selectedAnswers != null) {
+                  userAnswers[currentQuestion] = selectedAnswers!;
+                }
+
+                // If it's the last question, navigate to the result screen.
+                if (currentQuestion == questionData.length - 1) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => ResultScreen(questionData: userAnswers),
+                    ),
+                  );
+                } else {
                   setState(() {
                     currentQuestion = newIndex;
+                    selectedAnswers = null; // Reset selection for next question
                   });
-                },
-              ),
-            ] else ...[
-              ResultScreen(questionData: userAnswers),
-            ],
+                }
+              },
+            ),
           ],
         ),
       ),
