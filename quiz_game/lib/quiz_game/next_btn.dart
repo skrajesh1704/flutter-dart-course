@@ -47,7 +47,7 @@ class _NextBtnState extends State<NextBtn> {
         foregroundColor: Colors.black,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         side: BorderSide(
-          width: 1.5,
+          width: 1.3,
           strokeAlign: BorderSide.strokeAlignOutside,
           color: Colors.grey,
         ),
