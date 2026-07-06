@@ -45,7 +45,9 @@ class _NextBtnState extends State<NextBtn> {
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14.0),
+        ),
         side: BorderSide(
           width: 1.3,
           strokeAlign: BorderSide.strokeAlignOutside,
