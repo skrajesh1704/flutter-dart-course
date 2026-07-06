@@ -58,7 +58,7 @@ class _NextBtnState extends State<NextBtn> {
         'Next',
         style: TextStyle(
           fontSize: 18.0,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
           color: Colors.black,
         ),
       ),
