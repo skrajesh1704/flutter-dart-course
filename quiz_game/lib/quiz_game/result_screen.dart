@@ -38,10 +38,10 @@ class ResultScreen extends StatelessWidget {
           Row(
             children: [
               // Serial number column.
-              TextSection(textInput: questionSet.toString()),
+              TextSection(textInput: questionSet['id'].toString()),
 
               // Question column.
-              TextSection(textInput: 'Question'),
+              TextSection(textInput: questionSet['question'].toString()),
             ],
           ),
 
