@@ -10,9 +10,14 @@ import 'package:quiz_game/quiz_game/text_section.dart';
 class ResultScreen extends StatelessWidget {
   /// Stores the question number and its corresponding answer.
   final Map<int, String> questionData;
+  final Map<String, dynamic> questionSet;
 
   /// Constructor for the ResultScreen.
-  const ResultScreen({required this.questionData, super.key});
+  const ResultScreen({
+    required this.questionData,
+    required this.questionSet,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +38,7 @@ class ResultScreen extends StatelessWidget {
           Row(
             children: [
               // Serial number column.
-              TextSection(textInput: 'Sl.'),
+              TextSection(textInput: questionSet.toString()),
 
               // Question column.
               TextSection(textInput: 'Question'),
