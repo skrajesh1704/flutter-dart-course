@@ -94,7 +94,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => ResultScreen(questionData: userAnswers),
+                      builder: (_) => ResultScreen(
+                        questionData: userAnswers,
+                        questionSet: questionSet,
+                      ),
                     ),
                   );
                 } else {
