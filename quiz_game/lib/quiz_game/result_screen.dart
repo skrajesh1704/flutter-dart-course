@@ -1,57 +1,76 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_game/quiz_game/text_section.dart';
 
-/// Displays the quiz result screen.
-///
-/// Shows:
-/// - The user's score
-/// - A simple header for the result table
-/// - The correct answers (currently displaying the questionData map)
 class ResultScreen extends StatelessWidget {
-  /// Stores the question number and its corresponding answer.
   final Map<int, String> questionData;
-  final Map<String, dynamic> questionSet;
+  final List<Map<String, dynamic>> questionSet;
 
-  /// Constructor for the ResultScreen.
   const ResultScreen({
+    super.key,
     required this.questionData,
     required this.questionSet,
-    super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+    int score = 0;
+
+    for (int i = 0; i < questionSet.length; i++) {
+      final correctAnswer = questionSet[i]['options'][questionSet[i]['answer']];
+
+      if (questionData[i] == correctAnswer) {
+        score++;
+      }
+    }
+
     return Scaffold(
-      // Sets the background color of the screen.
       backgroundColor: Colors.white,
-
+      appBar: AppBar(title: const Text("Quiz Result"), centerTitle: true),
       body: Column(
-        // Centers all widgets vertically.
-        mainAxisAlignment: MainAxisAlignment.center,
-
         children: [
-          // Displays the user's score.
-          // Replace X and Y with actual values.
-          TextSection(textInput: 'You have scored X out of Y questions'),
+          const SizedBox(height: 20),
 
-          // Header row for the result summary.
-          Row(
-            children: [
-              // Serial number column.
-              TextSection(textInput: questionSet['id'].toString()),
-
-              // Question column.
-              TextSection(textInput: questionSet['question'].toString()),
-            ],
+          TextSection(
+            textInput: "You have scored $score out of ${questionSet.length}",
+            textSize: 22,
           ),
 
-          // Displays the heading for correct answers.
-          TextSection(textInput: 'Correct answer'),
+          const SizedBox(height: 20),
 
-          // Displays the questionData map.
-          // You can later replace this with a ListView or
-          // dynamically generated widgets for better formatting.
-          TextSection(textInput: questionData.toString()),
+          Expanded(
+            child: ListView.builder(
+              itemCount: questionSet.length,
+              itemBuilder: (context, index) {
+                final question = questionSet[index];
+
+                final correctAnswer = question['options'][question['answer']];
+
+                final userAnswer = questionData[index] ?? "Not Answered";
+
+                return Card(
+                  margin: const EdgeInsets.all(10),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Q${question['id']}. ${question['question']}",
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+
+                        const SizedBox(height: 8),
+
+                        Text("Correct Answer: $correctAnswer"),
+
+                        Text("Your Answer: $userAnswer"),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
