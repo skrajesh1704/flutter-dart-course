@@ -96,7 +96,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     MaterialPageRoute(
                       builder: (_) => ResultScreen(
                         questionData: userAnswers,
-                        questionSet: questionSet,
+                        questionSet: questionData,
                       ),
                     ),
                   );
