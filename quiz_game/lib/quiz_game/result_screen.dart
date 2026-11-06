@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_game/quiz_game/restart_btn.dart';
 import 'package:quiz_game/quiz_game/text_section.dart';
 
 /// Displays the final quiz result along with
@@ -38,7 +39,11 @@ class ResultScreen extends StatelessWidget {
       backgroundColor: Colors.white,
 
       // App bar shown at the top of the screen.
-      appBar: AppBar(title: const Text("Quiz Result"), centerTitle: true),
+      appBar: AppBar(
+        title: const Text("Quiz Result"),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+      ),
 
       body: Column(
         children: [
@@ -114,6 +119,10 @@ class ResultScreen extends StatelessWidget {
                 );
               },
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 15.0, bottom: 30.0),
+            child: RestartBtn(userAnswer: questionData),
           ),
         ],
       ),
